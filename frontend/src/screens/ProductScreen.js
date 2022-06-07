@@ -5,19 +5,21 @@ import Rating from '../components/Rating'
 import axios from 'axios'
 
 
-function ProductScreen( { match } ) {
+function ProductScreen( ) {
   const { id } = useParams()
   const [product, setProduct] = useState([])
 
   useEffect(() => {
 
     async function fetchProduct(){
-      const { data } = await axios.get(`http://127.0.0.1:8000/api/products/${id}`)
+      const { data } = await axios.get(`/api/products/${id}`)
       setProduct(data)
     }
 
     fetchProduct()
   }, [])
+
+
   return (
     <div>
         <Link to='/' className='btn btn-light my-3'>Go Back</Link>

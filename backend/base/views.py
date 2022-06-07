@@ -37,4 +37,4 @@ def getProduct(request, pk):
             product = i
             break
 
-    return Response(products)
+    return Response(product)
