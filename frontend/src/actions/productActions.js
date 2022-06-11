@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+
 import { 
     PRODUCT_LIST_REQUEST,
     PRODUCT_LIST_SUCCESS,
@@ -36,8 +36,7 @@ export const listProductDetails = (id) => async (dispatch) => {
         dispatch({ type: PRODUCT_DETAILS_REQUEST })
 
         const { data } = await axios.get(`/api/products/${id}`)
-        console.log(data)
-
+        
         dispatch({
             type: PRODUCT_DETAILS_SUCCESS,
             payload: data

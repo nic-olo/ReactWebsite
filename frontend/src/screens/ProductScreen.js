@@ -82,35 +82,38 @@ function ProductScreen() {
 
                     {product.countInStock > 0 && (
                       <ListGroup.Item>
-                        <Row>
-                          <Col>Qty</Col>
-                          <Col xs='auto' className='my-1'>
-                            <Form.Control 
-                              as="select"
-                              value={qty}
-                              onChange={(e) => setQty(e.target.value)}
-                            >
-                              {
-                                [...Array(product.countInStock).keys()].map((x) => (
-                                  <option key={x + 1} value={x + 1}>
-                                    {x + 1}
-                                  </option>
-                                ))
-                              }
-                            </Form.Control>
-                          </Col>
-                        </Row>
+                          <Row>
+                              <Col>Qty</Col>
+                              <Col xs='auto' className='my-1'>
+                                  <Form.Control
+                                      as="select"
+                                      value={qty}
+                                      onChange={(e) => setQty(e.target.value)}
+                                  >
+                                      {
+
+                                          [...Array(product.countInStock).keys()].map((x) => (
+                                              <option key={x + 1} value={x + 1}>
+                                                  {x + 1}
+                                              </option>
+                                          ))
+                                      }
+
+                                  </Form.Control>
+                              </Col>
+                          </Row>
                       </ListGroup.Item>
                     )}
-    
+
+
                     <ListGroup.Item>
-                      <Button 
-                        onClick={addToCartHandler}
-                        className='btn-block' 
-                        disabled={product.countInStock === 0} 
-                        type='button'>
-                          Add to Cart
-                      </Button>
+                        <Button
+                            onClick={addToCartHandler}
+                            className='btn-block'
+                            disabled={product.countInStock == 0}
+                            type='button'>
+                            Add to Cart
+                        </Button>
                     </ListGroup.Item>
                   </ListGroup>
                 </Card>
