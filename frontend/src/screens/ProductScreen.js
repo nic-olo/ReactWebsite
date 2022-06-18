@@ -25,7 +25,7 @@ function ProductScreen() {
     navigate(`/cart/${id}?qty=${qty}`)
   }
 
-  return (
+  return ( 
     <div>
         <Link to='/' className='btn btn-light my-3'>Go Back</Link>
         {loading ? 
@@ -110,7 +110,7 @@ function ProductScreen() {
                         <Button
                             onClick={addToCartHandler}
                             className='btn-block'
-                            disabled={product.countInStock == 0}
+                            disabled={product.countInStock === 0}
                             type='button'>
                             Add to Cart
                         </Button>
