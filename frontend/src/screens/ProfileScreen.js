@@ -160,7 +160,7 @@ function ProfileScreen() {
                                         <LinkContainer to={`/order/${order._id}`}>
                                             <Button className='btn-sm'>Details</Button>
                                         </LinkContainer>
-                                    </td>
+                                    </td> 
                                 </tr>
                             ))}
                         </tbody>
