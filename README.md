@@ -1,2 +1,2 @@
 # ReactWebsite
- Building first ReactJS Website
+ Building a website in ReactJS and Django
